@@ -759,7 +759,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'location',
     callback: (location: Location) => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register stationary location event listener.
@@ -770,7 +770,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'stationary',
     callback: (location: StationaryLocation) => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register activity monitoring listener.
@@ -781,7 +781,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'activity',
     callback: (activity: Activity) => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register start event listener.
@@ -794,7 +794,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'start',
     callback: () => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register stop event listener.
@@ -807,7 +807,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'stop',
     callback: () => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register error listener.
@@ -818,7 +818,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'error',
     callback: (error: BackgroundGeolocationError) => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register authorization listener.
@@ -832,7 +832,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'authorization',
     callback: (status: AuthorizationStatus) => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register foreground event listener.
@@ -845,7 +845,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'foreground',
     callback: () => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register background event listener.
@@ -858,7 +858,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'background',
     callback: () => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register abort_requested event listener.
@@ -871,7 +871,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'abort_requested',
     callback: () => void
-  ): void;
+  ): EventSubscription;
 
   /**
    * Register http_authorization event listener.
@@ -884,7 +884,7 @@ export interface BackgroundGeolocationPlugin {
   on(
     eventName: 'http_authorization',
     callback: () => void
-  ): void;
+  ): EventSubscription;
 
 }
 
